@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realtime HTML Update</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+    
+    <div class="blur-circle"></div>
+    <div class="blur-circle2"></div>
+    <div class="header">
+        <div class="left_header reveal-left">
+            <a href="index.html" class=""><img src="assets/logo.png" class="logo"></a>
+        </div>
+
+        <div class="right_header">
+            <a href="index.html" class="portfolio">Home</a>
+            <a href="portfolio.html" class="portfolio">Portfolio</a>
+            <a href="about.html" class="about">About</a>
+            <a href="contact.html" class="contact">Contact</a>
+        </div>
+    </div>
+
+    <!-- <div class="portfolio-header">
+        <h1>Portfolio</h1>
+        <p>Explore our diverse portfolio showcasing our expertise in media production, digital marketing, and creative solutions. From broadcast to digital platforms, we bring your vision to life with innovative storytelling and engaging content.</p>
+    </div> -->
+
+    <div class="contact-body">
+        <div class="contact-child-left reveal-left">
+            <h1>Advertising Opportunities</h1>
+            <p>News 12/26 can help deliver your unique business message to your future customers no matter where they are or what screen they are looking at. Our seasoned staff of marketing experts will help devise a marketing plan for virtually any advertising budget using a custom message produced by our creative services team.</p>
+            <br>
+            <h3>We Offer</h3>
+            <ul>
+                <li>Local news, network, and syndicated programming on WRDW, WAGT, ERDW, EAGT and Telemundo</li>
+                <li>Sports programming such as NFL Football, College Football, Soccer, Nascar, NCAA Basketball, PGA Golf and The Masters</li>
+                <li>Online advertising across wrdw.com, News 12/26 News App, and 12/26 First Alert Weather App</li>
+                <li>Targeted commercials across streaming platforms and content</li>
+                <li>Targeted emails</li>
+                <li>Targeted display and video advertising across the internet</li>
+            </ul>
+        </div>
+        
+        <div class="contact-child-right reveal-right">
+            <div class="form-left">
+                <label>Name</label>
+                <input type="text" name="name">
+
+                <label>Business Name</label>
+                <input type="text" name="businessName">
+
+                <label>E-mail</label>
+                <input type="email" name="email">
+
+                <label>Phone Number</label>
+                <input type="tel" name="phone">
+
+                <label>Website</label>
+                <input type="text" name="website">
+
+                <label>Areas you serve</label>
+                <input type="text" name="areas">
+            </div>
+
+            <div class="form-right reveal-right">
+                <div class="form-group">
+                <p><strong>Looking for:</strong></p>
+                <label><input type="ra>dio" name="lookingFor" value="broadcast"> Broadcast Marketing</label><br>
+                <label><input type="radio" name="lookingFor" value="digital"> Digital Marketing</label><br>
+                <label><input type="radio" name="lookingFor" value="both"> Both (Broadcast and Digital)</label>
+                </div>
+
+                <div class="form-group">
+                <p><strong>Preferred Contact Method</strong></p>
+                <label><input type="checkbox" name="contactMethod" value="phone"> Phone</label><br>
+                <label><input type="checkbox" name="contactMethod" value="email"> Email</label>
+                </div>
+
+                <div class="form-group">
+                <p><strong>Are you a non-profit?</strong></p>
+                <label><input type="radio" name="nonProfit" value="yes"> Yes</label><br>
+                <label><input type="radio" name="nonProfit" value="no"> No</label>
+                </div>
+                <div class="form-bottom">
+                    <p><strong>Terms and conditions</strong></p>
+                    <p>
+                    I have read, understand, and agree to the 
+                    <a href="#">Website usage agreement</a> and 
+                    <a href="#">privacy policy</a>.
+                    </p>
+                    <label>
+                    <input type="radio" name="agree" required> I Agree to the Terms and Conditions
+                    </label>
+                </div>
+
+                <a href="" class="btnWork reveal-right">Submit</a>
+            </div>
+            
+        </div>
+    
+    </div>
+
+    
+    
+
+    <div class="content-4">
+        <div class="content-4-a reveal">
+            <div class="content-4-1">
+                <img src="assets/broadcast.png" alt="">
+            </div>
+            <h3>Broadcast</h3>
+        </div>
+        <div class="content-4-a reveal">
+            <div class="content-4-2">
+                <img src="assets/tv.png" alt="">
+            </div>
+            <h3>Streaming TV</h3>
+        </div>
+        <div class="content-4-a reveal">
+            <div class="content-4-3">
+                <img src="assets/radio.png" alt="">
+            </div>
+            <h3>Streaming Radio</h3>
+        </div>
+        <div class="content-4-a reveal">
+            <div class="content-4-4">
+                <img src="assets/digital.png" alt="">
+            </div>
+            <h3>Digital</h3>
+        </div>
+        <div class="content-4-a reveal">
+            <div class="content-4-5">
+                <img src="assets/outdoor.png" alt="">
+            </div>
+            <h3>Outdoor</h3>
+        </div>
+    </div>
+
+    <div class="content-5">
+        <div class="floating-content reveal-left">
+            <h3 class="reveal-right">Collaborate With Us!</h3>
+            <h1 class="reveal-left">Fuel Your Next Vision</h1>
+            <a href="contact.html" class="btnContact reveal-right" style="background-color: var(--secondary-bg); border-radius: 10vh; border: 0;"><span>Get Started</span></a>
+        </div>
+    </div>
+
+    <script>
+        function revealOnScroll() {
+            const reveals = document.querySelectorAll('.reveal, .reveal-right, .reveal-left');
+
+            reveals.forEach(el => {
+            const windowHeight = window.innerHeight;
+            const revealTop = el.getBoundingClientRect().top;
+            const revealPoint = 100;
+
+            if (revealTop < windowHeight - revealPoint) {
+                el.classList.add('active');
+            } else {
+                el.classList.remove('active');
+            }
+            });
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+</script>
+</body>
+
+
+</html>
