@@ -361,10 +361,12 @@ p {
     align-items: center;
     align-content: center;
 
-    height: 100vh;
+    height: auto;
     z-index: 1;
     margin-top: 20px;
     overflow: visible;
+
+    padding: 2rem 0 2rem 0;
 }
 
 .what-we-do-wrapper{
@@ -434,6 +436,18 @@ p {
     /* background-color: red; */
     height: 40vh;
     width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.why-choose-us-col-right h1, .what-we-do-col-left h1{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.why-choose-us-col-right p, .what-we-do-col-left p{
+    width: 80%;
 }
 
 .why-choose-us-col img{
@@ -598,7 +612,7 @@ p {
 /* START OF PORTFOLIO CSS */
 
 .portfolio-hero{
-    height: 100vh;
+    height: 50vh;
     width: 100%;
 
     display: flex;
@@ -609,7 +623,7 @@ p {
 
     z-index: 0;
 
-    gap: 2rem;
+    gap: 5rem;
 }
 
 .portfolio-hero p{
@@ -626,12 +640,21 @@ p {
     display: flex;
     width: 80%;
     height: auto;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding:5rem 0 5rem 0;
+    gap: 5rem;
 
     /* background-color: red; */
 
+}
+
+.portfolio-cs-team-header{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
 }
 
 .pic{
@@ -639,8 +662,6 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    line-height: .2rem;
 }
 
 .slice{
@@ -650,7 +671,7 @@ p {
 }
 
 .pic img{
-    width: 80%;
+    width: 10rem;
 }
 
 .pic p, .pic h3{
@@ -718,9 +739,10 @@ p {
     z-index: 1;
 }
 
+
 /* START OF CREATIVE SERVICES BANNER */
 .cs-banner{
-    height: 70vh;
+    height: 50vh;
     margin-top: 2rem;
     background-color: rgb(22, 40, 68);
     /* background-color: red; */
@@ -756,13 +778,18 @@ p {
     display: flex;
     flex-direction: column;
     text-align: center;
-    justify-content: center;
-    align-content: center;
+    justify-content: space-around;
+    align-content: space-around;
     align-items: center;
+    gap: 2rem;
+}
+
+.icons h3, .icons p{
+    font-size: 1.2rem;
 }
 
 .icons img{
-    width: 20%;
+    width: clamp(2rem, 5vw, 5rem);
 }
 
 /* END OF CREATIVE SERVICES BANNER */
@@ -832,6 +859,20 @@ p {
     margin-top: 3rem;
 }
 
+.sales-team-container-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    width: 100%;
+}
+
+.sales-team-container-title p{
+    width: 50%;
+    text-align: center;
+}
+
 .aboutus-hero h1{
     font-size: 5rem;
 }
@@ -858,6 +899,10 @@ p {
     width: 60%;
     justify-content: center;
     gap: 2rem;
+}
+
+.sales-team-container h3{
+    font-size: ;
 }
 
 
@@ -1068,7 +1113,7 @@ p {
 .wrdw-leadership-container{
     display: flex;
     width: 80%;
-    gap: 2rem;
+    gap: 5rem;
     justify-content: center;
     align-items: center;
     align-content: center;
@@ -1087,7 +1132,28 @@ p {
 }
 
 .wrdw-leadership-child img{
-    width: 80%;
+    width: 10rem;
+}
+
+.wrdw-leadership-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.wrdw-leadership-text bold{
+    font-weight: bold;
+}
+
+.wrdw-leadership-text p{
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+hr{
+    width: 40%;
+    border: 1px solid var(--btnColors);
 }
 
 /* END OF SALES TEAM CSS */
@@ -1275,6 +1341,13 @@ p {
         justify-items: center;
         align-items: center;
         text-align: center;
+    }
+
+    .what-we-do-col-left h1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content:  center;
     }
 
     .why-choose-us-col-left{
