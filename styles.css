@@ -182,6 +182,10 @@ p {
     display: flex;
     justify-content: space-between;
 
+    background-color: transparent;
+
+    z-index: 10;
+
 }
 
 .logo{
@@ -562,7 +566,7 @@ p {
 /* START OF COLLABORATE */
 
 .collaborate-bg{
-    height: 30vh;
+    height: 35vh;
     width: 100%;
     background: #061520;
     display: flex;
@@ -571,7 +575,7 @@ p {
 }
 
 .collaborate{
-    height: 25vh;
+    height: 30vh;
     width: 55%;
     background: linear-gradient(90deg, #B1FFF6 0%, #26A5FF 100%);
     border-radius: 5vh;
@@ -595,6 +599,7 @@ p {
 
 .portfolio-hero{
     height: 100vh;
+    width: 100%;
 
     display: flex;
     flex-direction: column;
@@ -620,9 +625,12 @@ p {
 .leadership{
     display: flex;
     width: 80%;
+    height: auto;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 3rem;
+    padding:5rem 0 5rem 0;
+
+    /* background-color: red; */
 
 }
 
@@ -648,6 +656,66 @@ p {
 .pic p, .pic h3{
     width: 100%;
     text-align: center;
+}
+
+.portfolio-header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: -10vh;
+    z-index: 0;
+}
+
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+    z-index: -1; 
+    pointer-events: none; 
+}
+
+.portfolio-header-wrapper {
+    position: relative;
+    z-index: 1;
+
+    width: 80%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    gap: 3rem;
+
+    color: white;
+    margin-top: 10rem;
+}
+
+.portfolio-header-wrapper p, h1 {
+    width: 50%;
+    text-align: center;
+}
+
+.portfolio-header-wrapper h1{
+    font-family: "Water Brush", cursive;
+    font-size: clamp(4rem, 8vw, 8rem);
+    line-height: clamp(4rem, 8vw, 8rem);
+}
+.index1 {
+    z-index: 1;
 }
 
 /* START OF CREATIVE SERVICES BANNER */
@@ -915,10 +983,17 @@ p {
 }
 
 .more-ways-top{
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+
     background-color: red;
     transform: skew(-10deg); /* slants the background */
     padding: 0.2em 0.5em;
+}
+
+.more-ways-top h1{
+    width: 100%;
 }
 
 .transparent-text {
@@ -1089,6 +1164,24 @@ p {
     .blob, .hero-page-right{
         display: none;
     }
+    .menu{
+        width: 100%;
+        height: auto;
+        gap: 1rem;
+    }
+
+    .logo{
+        height: auto;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .contact-min-width{
+        height: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     .wave-top{
         display: none;
@@ -1140,6 +1233,7 @@ p {
 
     .what-we-do-parent{
         height: auto;
+        gap: 0;
     }
     .what-we-do-container{
         height: auto;
@@ -1242,6 +1336,7 @@ p {
 
     .leadership{
         flex-direction: column;
+        width: 100%;
     }
 
     .slice{
@@ -1370,5 +1465,20 @@ p {
     .more-ways-top h1{
         text-align: center;
     }
+
+    .more-ways-top{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .aboutus-hero-bot img{
+        display: none;
+    }
+
+    .channel-icon-container{
+        border-radius: 1rem;
+    }
+
 }
 /* RESPONSIVE END */
