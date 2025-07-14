@@ -901,9 +901,125 @@ p {
     gap: 2rem;
 }
 
-.sales-team-container h3{
-    font-size: ;
+.new-leadership-team-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 2rem 0 2rem 0;
+    background: linear-gradient(-180deg, var(--secondary-bg) 0%, var(--primary-bg) 100%);
 }
+
+.new-leadership-team-box{
+    transition: 0.3s ease;
+}
+
+.new-leadership-team-box:hover{
+    box-shadow: 8px 8px 1px rgb(11, 15, 38);
+    
+    scale: 1.01;
+    transition: 0.3s ease;
+}
+
+.bio {
+  position: absolute;
+  width: 100%;
+
+  text-align: center;
+  top: 70%;
+  left: 50%;
+  
+  text-shadow: 1px 1px 15px rgb(11, 15, 38);
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+  font-size: 2rem;
+}
+
+.new-leadership-team-box:hover .bio {
+  opacity: 1;
+}
+
+.new-leadership-team-content{
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 5rem;
+}
+
+.new-leadership-team-box-wrapper{
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+    width: 100%;
+}
+
+.new-leadership-team-box .wrdw-leadership-text {
+    background-color: var(--dark-button);
+    transition: 0.3s ease;
+}
+
+.new-leadership-team-box {
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 2rem;
+
+  text-decoration: none;
+}
+
+.img-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 /1 ;
+  overflow: hidden;
+}
+
+.img-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2rem 2rem 0 0;
+  transition: opacity 0.3s ease;
+}
+
+.new-leadership-team-box .wrdw-leadership-text{
+    width: 20rem;
+    padding: 1rem 0 1rem 0;
+    border-radius: 0 0 2rem 2rem;
+    transition: 0.3s ease;
+}
+
+.img-default {
+  opacity: 1;
+  z-index: 1;
+}
+
+.img-hover {
+  opacity: 0;
+  z-index: 2;
+}
+
+.img-wrapper:hover .img-default {
+  opacity: 1;
+}
+
+.img-wrapper:hover .img-hover {
+  opacity: 1;
+}
+
+
 
 
 /* END OF ABOUT US */
@@ -1376,25 +1492,27 @@ hr{
     }
 
     .services{
-        height: auto;
-    }
-
-    .services-box{
-        width: clamp(3rem, 10vw, 4rem);
-        height: clamp(3rem, 10vw, 4rem);
+        height: 100vh;
     }
 
     .services-wrapper{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
+        height: auto;
         width: 100%;
-        height: clamp(80vh, 100vh, 120vh);
-        gap: clamp(8rem, 8vw, 8rem);
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .services img{
-        width: 40%;
+        width: 50%;
+    }
+
+    .services-1{
+        width: 100%;
+    }
+
+    .services-box{
+        width: 5rem;
+        height: 5rem;
     }
 
     .portfolio-hero, .cs-banner{
@@ -1426,10 +1544,6 @@ hr{
     }
 
     .collaborate h3, .portfolio-hero h3 {
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
-    }
-
-    .services-1 p, .services-1 h3 {
     font-size: clamp(1rem, 2.5vw, 1.5rem);
     }
 
@@ -1473,12 +1587,20 @@ hr{
         align-content: center;
     }
 
+    .portfolio-header, .portfolio-header-wrapper{
+        height: auto;
+        padding-bottom: 1rem;
+    }
+
     .portfolio-child{
         width: 80%;
     }
 
     /* ABOUT US */
-
+    .aboutus-hero{
+        height: auto;
+        padding-bottom: 1rem;
+    }
     .aboutus-hero h1, .sales-team-container h1, .our-channels-container h1{
         font-size: 2rem;
         text-align: center;
