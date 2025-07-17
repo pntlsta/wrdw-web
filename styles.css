@@ -850,7 +850,10 @@ p {
 .aboutus-hero{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
     width: 100%;
     height: 90vh;
     overflow-y: hidden;
@@ -861,13 +864,13 @@ p {
 .aboutus-hero-top{
     display: flex;
     flex-direction: column;
+
     justify-content: center;
     align-items: center;
     align-content: center;
-    height: 45vh;
     text-align: center;
-    gap: 2rem;
-    margin-top: 3rem;
+    gap: 5rem;
+    margin-top: -5rem;
 }
 
 .sales-team-container-title{
@@ -1343,6 +1346,60 @@ hr{
 
 /* NEW PORTFOLIO */
 
+/* FOOTER */
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    padding: 0 1rem 0 1rem;
+}
+
+.footer p{
+    font-size: 1rem;
+    padding: .5rem;
+}
+
+/* FOOTER */
+
+/* BIOS */
+
+.bio-wrapper{
+    height: auto;
+    width:100%;
+
+    display: flex;
+    background: linear-gradient(-180deg, var(--primary-bg) 0%, #000e18 100%);
+    align-content: center;
+    justify-content: center;
+}
+
+.bio-wrapper-left{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: flex-start;
+    padding-top: clamp(5rem, 10rem, 10rem);
+    padding-bottom: 10rem;
+}
+
+.bio-wrapper-right{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+    padding-top: clamp(5rem, 10rem, 10rem);
+    padding-bottom: 10rem;
+}
+
+.bio-wrapper img{
+    width: 65%;
+    border-radius: 2rem;
+    }
+
+/* END BIOS */
 
 
 
@@ -1779,6 +1836,50 @@ hr{
    .bio-arrow{
         opacity: 1;
         transition: 0.3s ease;
-}
+    }
+
+    .footer{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer p{
+        font-size: .8rem;
+    }
+
+    /* BIO */
+
+    .bio-wrapper{
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .bio-wrapper img{
+        width: 100%;
+        border-radius: 2rem;
+    }
+
+    .bio-wrapper-left{
+        padding: 2rem 0 2rem 0;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        font-size: 1.5rem;
+    }
+
+    .bio-wrapper-right{
+        padding: 2rem 0 2rem 0;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
 }
 /* RESPONSIVE END */
