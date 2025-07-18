@@ -869,10 +869,15 @@ p {
     align-items: center;
     align-content: center;
     text-align: center;
-    gap: 5rem;
-    margin-top: -5rem;
+    gap: 1rem;
+    /* margin-top: -5rem; */
+    
 }
 
+.aboutus-hero-top p{
+    font-weight: 200;
+    color: white;
+}
 .sales-team-container-title{
     display: flex;
     flex-direction: column;
